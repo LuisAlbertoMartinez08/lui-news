@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 
-mongoose.connect("mongodb://localhost/lui-news" || " mongodb://heroku_q44chbnk:p0keu2d88e3pnabefaij8uubgh@ds113000.mlab.com:13000/heroku_q44chbnk");
+mongoose.connect("mongodb://localhost/lui-news" || "mongodb://heroku_q44chbnk:p0keu2d88e3pnabefaij8uubgh@ds113000.mlab.com:13000/heroku_q44chbnk");
 var db = mongoose.connection;
 
 
