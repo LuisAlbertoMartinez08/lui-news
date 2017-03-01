@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 
-mongoose.connect("mongodb://localhost/lui-news" || "mongodb://heroku_q44chbnk:p0keu2d88e3pnabefaij8uubgh@ds113000.mlab.com:13000/heroku_q44chbnk");
+mongoose.connect("mongodb://localhost/lui-news" || "mongodb://heroku_q44chbnk:p0keu2d88e3pnabefaij8uubgh@ds113000.mlab.com:13000/heroku_q44chbnkx");
 var db = mongoose.connection;
 
 
@@ -144,6 +144,7 @@ app.post("/articles/:id", function(req, res) {
 
 
 
-app.listen(3000, function() {
+var port = process.env.PORT || 3000;
+app.listen(port, function() {
   console.log("App running on port 3000!");
 });
